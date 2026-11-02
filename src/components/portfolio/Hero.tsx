@@ -26,7 +26,7 @@ export default function Hero() {
             className="portrait-image"
             fill
             priority
-            sizes="(max-width: 380px) calc(100vw - 44px), (max-width: 620px) calc(100vw - 64px), (max-width: 760px) 400px, (max-width: 900px) 34vw, (max-width: 1250px) 34vw, 460px"
+            sizes="(max-width: 380px) 220px, (max-width: 620px) 240px, (max-width: 760px) 320px, (max-width: 900px) 34vw, (max-width: 1250px) 34vw, 460px"
             src="/image/mahabub-hero.webp"
           />
         </div>

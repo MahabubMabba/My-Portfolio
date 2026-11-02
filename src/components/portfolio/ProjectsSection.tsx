@@ -16,7 +16,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           alt={`${project.title} project preview`}
           className="project-image"
           fill
-          sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1100px) 50vw, 40vw"
+          sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 50vw, 40vw"
           src={project.image}
         />
       </div>
