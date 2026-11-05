@@ -17,21 +17,32 @@ export type Skill = {
   category: "Frontend" | "Backend" | "Tools";
 };
 
+export type ProjectCategory =
+  | "full-stack"
+  | "frontend"
+  | "backend"
+  | "academic-practice";
+
+export type ProjectCategoryOption = {
+  id: ProjectCategory;
+  label: string;
+};
+
 export type Project = {
   id: string;
   title: string;
-  description: string;
-  category: string;
+  description?: string;
+  category: ProjectCategory;
   technologies: {
     id: string;
     name: string;
   }[];
   features: string[];
-  image: string;
+  image?: string;
   githubUrl?: string;
   liveUrl?: string;
   detailsUrl?: string;
-  featured: boolean;
+  featured?: boolean;
 };
 
 export type ExperienceRecord = {
@@ -94,6 +105,8 @@ export const skills: Skill[] = [
   { id: "react", name: "React.js", category: "Frontend" },
   { id: "nextjs", name: "Next.js", category: "Frontend" },
   { id: "tailwind", name: "Tailwind CSS", category: "Frontend" },
+  { id: "daisyui", name: "DaisyUI", category: "Frontend" },
+  { id: "heroui", name: "HeroUI", category: "Frontend" },
   { id: "nodejs", name: "Node.js", category: "Backend"},
   {
     id: "express",
@@ -101,6 +114,8 @@ export const skills: Skill[] = [
     category: "Backend",
     
   },
+  { id: "better-auth", name: "Better Auth", category: "Backend" },
+  { id: "mongodb", name: "MongoDB", category: "Backend" },
   { id: "git", name: "Git", category: "Tools" },
   { id: "github", name: "GitHub", category: "Tools" },
   { id: "vscode", name: "VS Code", category: "Tools" },
@@ -112,13 +127,20 @@ export const skillCategories: Skill["category"][] = [
   "Tools",
 ];
 
+export const projectCategories: ProjectCategoryOption[] = [
+  { id: "full-stack", label: "Full Stack" },
+  { id: "frontend", label: "Frontend" },
+  { id: "backend", label: "Backend" },
+  { id: "academic-practice", label: "Academic & Practice" },
+];
+
 export const projects: Project[] = [
   {
     id: "devstack",
     title: "DevStack",
     description:
       "A React-based web application where users can explore web development technologies and build their own technology stack.",
-    category: "ACADEMIC ASSIGNMENT",
+    category: "academic-practice",
     technologies: [
       { id: "react", name: "React" },
       { id: "typescript", name: "TypeScript" },
@@ -141,7 +163,7 @@ export const projects: Project[] = [
     title: "FitLog",
     description:
       "A workout library web application for exploring exercises, viewing workout details, creating daily plans, and saving workouts for later.",
-    category: "ACADEMIC ASSIGNMENT",
+    category: "academic-practice",
     technologies: [
       { id: "nextjs", name: "Next.js" },
       { id: "react", name: "React" },
@@ -158,6 +180,31 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/MahabubMabba/6th-Assignment",
     liveUrl: "https://6th-assignment-flax.vercel.app/",
     featured: true,
+  },
+  {
+    id: "bazar-dor",
+    title: "Bazar Dor",
+    description:
+      "A responsive Bangladesh market price tracker for comparing current product rates, following price changes, and exploring market-wise pricing.",
+    category: "academic-practice",
+    technologies: [
+      { id: "nextjs", name: "Next.js" },
+      { id: "react", name: "React" },
+      { id: "typescript", name: "TypeScript" },
+      { id: "tailwind", name: "Tailwind CSS" },
+      { id: "daisyui", name: "DaisyUI" },
+      { id: "better-auth", name: "Better Auth" },
+      { id: "mongodb", name: "MongoDB" },
+      { id: "react-toastify", name: "React Toastify" },
+    ],
+    features: [
+      "Browse product prices by category and sort by price.",
+      "Compare minimum, maximum, average, and market-wise prices.",
+      "Track rising and falling prices and view detailed product information.",
+    ],
+    image: "/project-previews/bazar-dor.png",
+    githubUrl: "https://github.com/MahabubMabba/7th-Assignment",
+    liveUrl: "https://7th-assignment-omega.vercel.app/",
   },
 ];
 

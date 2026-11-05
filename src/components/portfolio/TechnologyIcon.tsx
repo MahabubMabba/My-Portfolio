@@ -12,6 +12,9 @@ const iconColors: Record<string, string> = {
   tailwind: "#38bdf8",
   "react-toastify": "#e74c3c",
   daisyui: "#1ad1a5",
+  heroui: "#7828c8",
+  "better-auth": "#f5f5f5",
+  mongodb: "#47a248",
   nodejs: "#83cd29",
   express: "#f5f5f5",
   git: "#f05032",
@@ -47,6 +50,61 @@ export default function TechnologyIcon({ id }: TechnologyIconProps) {
           fill={color}
           transform="translate(0 -2)"
         />
+      </svg>
+    );
+  }
+
+  if (id === "daisyui") {
+    return (
+      <svg aria-hidden="true" className="technology-icon" viewBox="0 0 32 32">
+        <path
+          d="M16 3.5c2.2 0 3.2 3.2 3.2 6.1 1.5-2.5 4-4.4 5.9-3.3 1.9 1.1.7 4.2-1.3 6.3 2.8-1 6-.6 6 1.6s-3.2 3.2-6 3.2c2.1 2.1 3.3 5.2 1.4 6.3-1.9 1.1-4.5-.8-6-3.3 0 2.9-1 6.1-3.2 6.1s-3.2-3.2-3.2-6.1c-1.5 2.5-4 4.4-5.9 3.3-1.9-1.1-.7-4.2 1.3-6.3-2.8 0-6-.9-6-3.1s3.2-3.2 6-3.2C6.1 9 4.9 5.9 6.8 4.8c1.9-1.1 4.5.8 6 3.3 0-2.9 1-4.6 3.2-4.6Z"
+          fill={color}
+        />
+        <circle cx="16" cy="16" r="3.1" fill="#101010" />
+      </svg>
+    );
+  }
+
+  if (id === "mongodb") {
+    return (
+      <svg aria-hidden="true" className="technology-icon" viewBox="0 0 32 32">
+        <path
+          d="M16 3.5c-1.1 3.2-7.4 8.3-7.4 15.1 0 4.8 2.7 8.1 6.6 9.1l.8 2.1.8-2.1c3.9-1 6.6-4.3 6.6-9.1C23.4 11.8 17.1 6.7 16 3.5Z"
+          fill={color}
+        />
+        <path d="M16 10v17" fill="none" stroke="#f5f5f3" strokeWidth="1.2" />
+      </svg>
+    );
+  }
+
+  if (id === "heroui") {
+    return (
+      <svg aria-hidden="true" className="technology-icon" viewBox="0 0 32 32">
+        <path
+          d="M7 6.5h3.5v7.8h11V6.5H25v19h-3.5v-8H10.5v8H7v-19Z"
+          fill={color}
+        />
+        <circle cx="16" cy="4.5" r="1.5" fill={color} />
+      </svg>
+    );
+  }
+
+  if (id === "better-auth") {
+    return (
+      <svg aria-hidden="true" className="technology-icon" viewBox="0 0 32 32">
+        <path
+          d="M16 3.5 27 8v7.1c0 6.8-4.4 11.2-11 13.4C9.4 26.3 5 21.9 5 15.1V8l11-4.5Z"
+          fill="none"
+          stroke={color}
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+        <path
+          d="M12.5 15.2a3.5 3.5 0 1 1 6.1 2.3l3.2 3.2h-3v2h-2v-2l-2.7-2.7a3.5 3.5 0 0 1-1.6-2.8Z"
+          fill={color}
+        />
+        <circle cx="15.9" cy="15.2" r=".8" fill="#101010" />
       </svg>
     );
   }
